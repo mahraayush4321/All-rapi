@@ -36,8 +36,13 @@ user_route.post(
 );
 
 user_route.post("/login", user_controller.user_login);
+
 user_route.get("/test", auth, (req, res) => {
   res.status(200).send({ success: true, msg: "authenticated" });
 });
+
+user_route.post("/update-password", user_controller.update_password);
+
+user_route.post("/forget-password", user_controller.forget_password);
 
 module.exports = user_route;
