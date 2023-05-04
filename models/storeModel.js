@@ -14,7 +14,7 @@ const storeSchema = mongoose.Schema({
     required: true,
   },
   address: {
-    tyoe: String,
+    type: String,
     required: true,
   },
   pin: {
@@ -22,13 +22,9 @@ const storeSchema = mongoose.Schema({
     required: true,
   },
   location: {
-    type: {
-      type: String,
-      required: true,
-    },
-    coordinates: [],
+    type: { type: String, required: true },
+    coordinate: [],
   },
 });
-
 storeSchema.index({ location: "2dsphere" });
 module.exports = mongoose.model("Store", storeSchema);

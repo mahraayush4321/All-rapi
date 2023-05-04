@@ -26,14 +26,14 @@ const storage = multer.diskStorage({
   },
 });
 
-const uplaod = multer({ storage: storage });
+const upload = multer({ storage: storage });
 
 const auth = require("../middleware/auth");
 const store_controller = require("../controllers/storeController");
 store_route.post(
   "/create-store",
   auth,
-  uplaod.single("logo"),
+  upload.single("logo"),
   store_controller.create_store
 );
 

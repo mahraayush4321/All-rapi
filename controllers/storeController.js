@@ -17,7 +17,7 @@ const create_store = async (req, res) => {
         } else {
           const store = new Store({
             vendor_id: req.body.vendor_id,
-            logo: req.file.logo,
+            logo: req.file.filename,
             business_email: req.body.business_email,
             address: req.body.address,
             pin: req.body.pin,
