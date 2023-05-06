@@ -14,6 +14,12 @@ app.use("/api", userRoutes);
 //store routes
 app.use("/api", storeRoute);
 
+//catergory routes
+
+const categoryRoute = require("./routes/categoryRoute");
+
+app.use("/api", categoryRoute);
+
 app.listen(3000, () => {
   console.log("server started running");
 });

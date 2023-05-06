@@ -22,7 +22,7 @@ const create_store = async (req, res) => {
             address: req.body.address,
             pin: req.body.pin,
             location: {
-              type: "Path",
+              type: "Point",
               coordinates: [
                 parseFloat(req.body.longitude),
                 parseFloat(req.body.latitude),
